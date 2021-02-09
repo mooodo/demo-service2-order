@@ -39,7 +39,7 @@ public class ProductHystrixImpl implements ProductService {
 	}
 
 	@Override
-	public void deleteProductList(List<Long> ids) {
+	public void deleteProductList(String ids) {
 		// TODO Auto-generated method stub
 
 	}
@@ -50,7 +50,7 @@ public class ProductHystrixImpl implements ProductService {
 	}
 
 	@Override
-	public List<Product> getProductList(List<Long> ids) {
+	public List<Product> getProductList(String ids) {
 		List<Product> rtn = new ArrayList<>();
 		rtn.add(DEFAULT_PRODUCT);
 		return rtn;

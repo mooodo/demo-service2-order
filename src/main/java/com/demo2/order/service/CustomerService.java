@@ -43,7 +43,7 @@ public interface CustomerService {
 	 * @return
 	 */
 	@GetMapping("orm/customer/loadMore")
-	public List<Customer> loadMore(@RequestParam("ids")List<Long> ids);
+	public List<Customer> loadMore(@RequestParam("ids") String ids);
 	/**
 	 * @param id
 	 * @return the address of the id
@@ -55,5 +55,5 @@ public interface CustomerService {
 	 * @return the list of addresses
 	 */
 	@GetMapping("orm/customer/loadAddresses")
-	public List<Address> loadAddresses(@RequestParam("ids")List<Long> ids);
+	public List<Address> loadAddresses(@RequestParam("ids") String ids);
 }

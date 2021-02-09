@@ -43,7 +43,7 @@ public interface ProductService {
 	 * @param ids
 	 */
 	@PostMapping("orm/product/deleteProductLost")
-	public void deleteProductList(@RequestParam("ids")List<Long> ids);
+	public void deleteProductList(@RequestParam("ids") String ids);
 	/**
 	 * get a product by id.
 	 * @param id
@@ -58,5 +58,5 @@ public interface ProductService {
 	 * @return a list of products
 	 */
 	@PostMapping("orm/product/getProductList")
-	public List<Product> getProductList(@RequestParam("ids")List<Long> ids);
+	public List<Product> getProductList(@RequestParam("ids") String ids);
 }

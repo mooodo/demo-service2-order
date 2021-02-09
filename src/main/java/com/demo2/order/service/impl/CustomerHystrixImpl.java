@@ -40,7 +40,7 @@ public class CustomerHystrixImpl implements CustomerService {
 	}
 
 	@Override
-	public List<Customer> loadMore(List<Long> ids) {
+	public List<Customer> loadMore(String ids) {
 		List<Customer> rtn = new ArrayList<>();
 		rtn.add(DEFAULT_CUSTOMER);
 		return rtn;
@@ -52,7 +52,7 @@ public class CustomerHystrixImpl implements CustomerService {
 	}
 
 	@Override
-	public List<Address> loadAddresses(List<Long> ids) {
+	public List<Address> loadAddresses(String ids) {
 		List<Address> rtn = new ArrayList<>();
 		rtn.add(DEFAULT_ADDRESS);
 		return rtn;
