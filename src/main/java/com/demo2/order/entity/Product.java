@@ -17,10 +17,13 @@ public class Product extends Entity<Long> {
 	private String unit;
 	private Long supplier_id;
 	private String classify;
+	private String image;
+	private Double originalPrice;
+	private String tip;
 	
 	public Product() { super(); }
 	public Product(Long id, String name, Double price, String unit, Long supplierId,
-			String classify) {
+			String classify, String image, Double originalPrice, String tip) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -28,6 +31,9 @@ public class Product extends Entity<Long> {
 		this.unit = unit;
 		this.supplier_id = supplierId;
 		this.classify = classify;
+		this.image = image;
+		this.originalPrice = originalPrice;
+		this.tip = tip;
 	}
 	/**
 	 * @return the id
@@ -102,6 +108,42 @@ public class Product extends Entity<Long> {
 	 */
 	public void setClassify(String classify) {
 		this.classify = classify;
+	}
+	/**
+	 * @return the image
+	 */
+	public String getImage() {
+		return image;
+	}
+	/**
+	 * @param image the image to set
+	 */
+	public void setImage(String image) {
+		this.image = image;
+	}
+	/**
+	 * @return the originalPrice
+	 */
+	public Double getOriginalPrice() {
+		return originalPrice;
+	}
+	/**
+	 * @param originalPrice the originalPrice to set
+	 */
+	public void setOriginalPrice(Double originalPrice) {
+		this.originalPrice = originalPrice;
+	}
+	/**
+	 * @return the tip
+	 */
+	public String getTip() {
+		return tip;
+	}
+	/**
+	 * @param tip the tip to set
+	 */
+	public void setTip(String tip) {
+		this.tip = tip;
 	}
 	
 }

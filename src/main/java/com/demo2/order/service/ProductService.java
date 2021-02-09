@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.demo2.order.entity.Product;
+import com.demo2.order.service.impl.ProductHystrixImpl;
 
 /**
  * The service for products.
  * @author fangang
  */
-@FeignClient(value="service-product")
+@FeignClient(value="service-product", fallback=ProductHystrixImpl.class)
 public interface ProductService {
 	/**
 	 * save a product.

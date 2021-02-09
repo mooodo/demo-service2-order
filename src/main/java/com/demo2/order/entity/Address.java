@@ -18,6 +18,20 @@ public class Address extends Entity<Long> {
 	private String zone;
 	private String address;
 	private String phone_number;
+	
+	public Address() { super(); }
+	
+	public Address(Long id, Long customerId, String country, String province, 
+			String city, String zone, String address, String phoneNumber) {
+		this.id = id;
+		this.customer_id = customerId;
+		this.country = country;
+		this.province = province;
+		this.city = city;
+		this.zone = zone;
+		this.address = address;
+		this.phone_number = phoneNumber;
+	}
 	/**
 	 * @return the id
 	 */

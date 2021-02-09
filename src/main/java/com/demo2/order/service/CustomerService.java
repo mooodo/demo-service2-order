@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.demo2.order.entity.Address;
 import com.demo2.order.entity.Customer;
+import com.demo2.order.service.impl.CustomerHystrixImpl;
 
 /**
  * The service of customer
  * @author fangang
  */
-@FeignClient(value="service-customer")
+@FeignClient(value="service-customer", fallback=CustomerHystrixImpl.class)
 public interface CustomerService {
 	/**
 	 * save a customer
