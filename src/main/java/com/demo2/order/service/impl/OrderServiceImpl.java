@@ -36,7 +36,7 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public void modifyOrder(Order order) {
-		dao.insertOrUpdate(order);
+		dao.update(order);
 	}
 
 	@Override
