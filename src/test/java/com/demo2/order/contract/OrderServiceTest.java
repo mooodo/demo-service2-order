@@ -28,7 +28,7 @@ import com.demo2.order.entity.Order;
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureJsonTesters
-@AutoConfigureStubRunner(ids= {"com.demo:demo-service2-product:+:stubs:9003",
+@AutoConfigureStubRunner(ids= {
 		"com.demo:demo-service2-customer:+:stubs:9002"}, stubsMode = StubRunnerProperties.StubsMode.LOCAL)
 public class OrderServiceTest {
 	@Autowired

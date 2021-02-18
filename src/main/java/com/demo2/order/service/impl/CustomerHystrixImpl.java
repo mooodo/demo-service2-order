@@ -23,38 +23,38 @@ public class CustomerHystrixImpl implements CustomerService {
 		= new Address(null, null, "未知国家", "未知省份", "未知地市", "未知乡镇", "未知地址", "");
 
 	@Override
-	public void save(Customer customer) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void delete(long id) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public Customer load(long id) {
-		return DEFAULT_CUSTOMER;
+		Customer customer = (Customer)DEFAULT_CUSTOMER.clone();
+		customer.setId(id);
+		return customer;
 	}
 
 	@Override
 	public List<Customer> loadMore(String ids) {
+		if(ids==null) return null;
 		List<Customer> rtn = new ArrayList<>();
-		rtn.add(DEFAULT_CUSTOMER);
+		String[] listOfId = ids.split(",");
+		for(String id : listOfId) {
+			rtn.add(load(new Long(id)));
+		}
 		return rtn;
 	}
 
 	@Override
 	public Address loadAddress(long id) {
-		return DEFAULT_ADDRESS;
+		Address address = (Address)DEFAULT_ADDRESS.clone();
+		address.setId(id);
+		return address;
 	}
 
 	@Override
 	public List<Address> loadAddresses(String ids) {
+		if(ids==null) return null;
 		List<Address> rtn = new ArrayList<>();
-		rtn.add(DEFAULT_ADDRESS);
+		String[] listOfId = ids.split(",");
+		for(String id : listOfId) {
+			rtn.add(loadAddress(new Long(id)));
+		}
 		return rtn;
 	}
 

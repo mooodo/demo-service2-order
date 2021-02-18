@@ -20,31 +20,6 @@ import com.demo2.order.service.impl.ProductHystrixImpl;
 @FeignClient(value="service-product", fallback=ProductHystrixImpl.class)
 public interface ProductService {
 	/**
-	 * save a product.
-	 * @param product
-	 */
-	@PostMapping("orm/product/saveProduct")
-	public void saveProduct(@RequestParam("product")Product product);
-	/**
-	 * save a list of products.
-	 * @param listOfProducts
-	 */
-	@PostMapping("orm/product/saveProductList")
-	public void saveProductList(@RequestParam("listOfProducts")List<Product> listOfProducts);
-	/**
-	 * delete a product by id.
-	 * @param id
-	 */
-	@GetMapping("orm/product/deleteProduct")
-	public void deleteProduct(@RequestParam("id")Long id);
-	
-	/**
-	 * delete a list of products
-	 * @param ids
-	 */
-	@PostMapping("orm/product/deleteProductLost")
-	public void deleteProductList(@RequestParam("ids") String ids);
-	/**
 	 * get a product by id.
 	 * @param id
 	 * @return a certain product.

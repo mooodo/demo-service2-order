@@ -21,30 +21,6 @@ public class ProductHystrixImpl implements ProductService {
 		= new Product(null, "未知产品", null, null, null, null, DEFAULT_IMAGE, null, null);
 
 	@Override
-	public void saveProduct(Product product) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void saveProductList(List<Product> listOfProducts) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void deleteProduct(Long id) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void deleteProductList(String ids) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public Product getProduct(Long id) {
 		return DEFAULT_PRODUCT;
 	}

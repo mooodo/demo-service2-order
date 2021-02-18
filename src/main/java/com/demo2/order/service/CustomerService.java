@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.demo2.order.entity.Address;
@@ -20,18 +19,6 @@ import com.demo2.order.service.impl.CustomerHystrixImpl;
  */
 @FeignClient(value="service-customer", fallback=CustomerHystrixImpl.class)
 public interface CustomerService {
-	/**
-	 * save a customer
-	 * @param customer
-	 */
-	@PostMapping("orm/customer/save")
-	public void save(@RequestParam("customer")Customer customer);
-	/**
-	 * delete a customer
-	 * @param id
-	 */
-	@GetMapping("orm/customer/delete")
-	public void delete(@RequestParam("id")long id);
 	/**
 	 * @param id
 	 * @return the customer of the id.
