@@ -20,7 +20,7 @@ public class CustomerHystrixImpl implements CustomerService {
 	private static Customer DEFAULT_CUSTOMER 
 		= new Customer(null, "未知用户", "", null, "", "");
 	private static Address DEFAULT_ADDRESS 
-		= new Address(null, null, "未知国家", "未知省份", "未知地市", "未知乡镇", "未知地址", "");
+		= new Address();
 
 	@Override
 	public Customer load(long id) {

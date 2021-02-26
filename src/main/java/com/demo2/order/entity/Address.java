@@ -12,26 +12,16 @@ public class Address extends Entity<Long> {
 	private static final long serialVersionUID = -7715747957884378980L;
 	private Long id;
 	private Long customer_id;
-	private String country;
-	private String province;
-	private String city;
-	private String zone;
+	private Long country_id;
+	private Long province_id;
+	private Long city_id;
+	private Long zone_id;
 	private String address;
 	private String phone_number;
-	
-	public Address() { super(); }
-	
-	public Address(Long id, Long customerId, String country, String province, 
-			String city, String zone, String address, String phoneNumber) {
-		this.id = id;
-		this.customer_id = customerId;
-		this.country = country;
-		this.province = province;
-		this.city = city;
-		this.zone = zone;
-		this.address = address;
-		this.phone_number = phoneNumber;
-	}
+	private Country country;
+	private Province province;
+	private City city;
+	private Zone zone;
 	/**
 	 * @return the id
 	 */
@@ -57,52 +47,52 @@ public class Address extends Entity<Long> {
 		this.customer_id = customerId;
 	}
 	/**
-	 * @return the country
+	 * @return the countryId
 	 */
-	public String getCountry() {
-		return country;
+	public Long getCountryId() {
+		return country_id;
 	}
 	/**
-	 * @param country the country to set
+	 * @param countryId the countryId to set
 	 */
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCountryId(Long countryId) {
+		this.country_id = countryId;
 	}
 	/**
-	 * @return the province
+	 * @return the provinceId
 	 */
-	public String getProvince() {
-		return province;
+	public Long getProvinceId() {
+		return province_id;
 	}
 	/**
-	 * @param province the province to set
+	 * @param provinceId the provinceId to set
 	 */
-	public void setProvince(String province) {
-		this.province = province;
+	public void setProvinceId(Long provinceId) {
+		this.province_id = provinceId;
 	}
 	/**
-	 * @return the city
+	 * @return the cityId
 	 */
-	public String getCity() {
-		return city;
+	public Long getCityId() {
+		return city_id;
 	}
 	/**
-	 * @param city the city to set
+	 * @param cityId the cityId to set
 	 */
-	public void setCity(String city) {
-		this.city = city;
+	public void setCityId(Long cityId) {
+		this.city_id = cityId;
 	}
 	/**
-	 * @return the zone
+	 * @return the zoneId
 	 */
-	public String getZone() {
-		return zone;
+	public Long getZoneId() {
+		return zone_id;
 	}
 	/**
-	 * @param zone the zone to set
+	 * @param zoneId the zoneId to set
 	 */
-	public void setZone(String zone) {
-		this.zone = zone;
+	public void setZoneId(Long zoneId) {
+		this.zone_id = zoneId;
 	}
 	/**
 	 * @return the address
@@ -127,5 +117,53 @@ public class Address extends Entity<Long> {
 	 */
 	public void setPhoneNumber(String phoneNumber) {
 		this.phone_number = phoneNumber;
+	}
+	/**
+	 * @return the country
+	 */
+	public Country getCountry() {
+		return country;
+	}
+	/**
+	 * @param country the country to set
+	 */
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+	/**
+	 * @return the province
+	 */
+	public Province getProvince() {
+		return province;
+	}
+	/**
+	 * @param province the province to set
+	 */
+	public void setProvince(Province province) {
+		this.province = province;
+	}
+	/**
+	 * @return the city
+	 */
+	public City getCity() {
+		return city;
+	}
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(City city) {
+		this.city = city;
+	}
+	/**
+	 * @return the zone
+	 */
+	public Zone getZone() {
+		return zone;
+	}
+	/**
+	 * @param zone the zone to set
+	 */
+	public void setZone(Zone zone) {
+		this.zone = zone;
 	}
 }

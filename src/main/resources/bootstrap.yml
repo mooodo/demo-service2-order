@@ -25,9 +25,9 @@ spring:
   sleuth:
     enabled: false
   datasource:
-    url: jdbc:mysql://118.190.201.78:32306/demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
-    username: demo
-    password: 1234
+    url: jdbc:mysql://master:32306/order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: order
+    password: order1234
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     database: 0
