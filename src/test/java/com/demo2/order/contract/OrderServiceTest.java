@@ -42,7 +42,7 @@ public class OrderServiceTest {
 				.param("customerId", "10001")
 				.param("addressId", "1000100")
 				.param("amount", "4000")
-				//.param("orderTime", "1609430400000")
+				.param("orderTime", "2021-01-01")
 				.param("flag", "CREATE"))
 		.andExpect(status().isOk());
 		
