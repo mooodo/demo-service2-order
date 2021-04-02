@@ -1,0 +1,7 @@
+eureka:
+  client:
+    enabled: false
+stubrunner:
+  idsToServiceIds:
+    demo-service2-product: service-product
+    demo-service2-customer: service-customer

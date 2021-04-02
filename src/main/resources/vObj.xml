@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vobjs>
+  <vo class="com.demo2.order.entity.Order" tableName="Order">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="customer_id" column="customer_id"></property>
+  	<property name="address_id" column="address_id"></property>
+  	<property name="amount" column="amount"></property>
+  	<property name="order_time" column="order_time"></property>
+  	<property name="flag" column="flag"></property>
+    <ref name="customer" refKey="customer_id" refType="manyToOne" 
+      bean="com.demo2.order.service.CustomerService" method="load" listMethod="loadMore">
+    </ref>
+    <ref name="address" refKey="address_id" refType="manyToOne" 
+      bean="com.demo2.order.service.CustomerService" method="loadAddress" listMethod="loadAddresses">
+    </ref>
+    <join name="orderItems" joinKey="order_id" joinType="oneToMany" isAggregation="true" class="com.demo2.order.entity.OrderItem"></join>
+  </vo>
+  <vo class="com.demo2.order.entity.OrderItem" tableName="OrderItem">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="order_id" column="order_id"></property>
+  	<property name="product_id" column="product_id"></property>
+  	<property name="quantity" column="quantity"></property>
+  	<property name="price" column="price"></property>
+  	<property name="amount" column="amount"></property>
+    <ref name="product" refKey="product_id" refType="manyToOne" 
+      bean="com.demo2.order.service.ProductService" method="getProduct" listMethod="getProductList">
+    </ref>
+  </vo>
+</vobjs>
