@@ -34,7 +34,7 @@ spec:
           - name: GIT_URL
             value: "http://demo-service-config:9000"
           - name: SW_AGENT_NAME
-            value: "demo-service2-customer"
+            value: "demo-service2-order"
           - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
             value: "skywalking:11800"
 ---
