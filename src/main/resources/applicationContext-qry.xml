@@ -11,9 +11,9 @@
 	<bean id="orderQry" class="com.demo2.support.repository.AutofillQueryServiceImpl">
 		<property name="queryDao">
 			<bean class="com.demo2.support.dao.impl.QueryDaoMybatisImpl">
-				<property name="sqlMapper" value="com.demo2.order.query.dao.OrderMapper"></property>
+				<property name="sqlMapper" value="com.demo2.order.query.dao.OrderMapper"/>
 			</bean>
 		</property>
-		<property name="dao" ref="repository"></property>
+		<property name="dao" ref="repository"/>
 	</bean>
 </beans>

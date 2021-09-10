@@ -25,7 +25,7 @@ import org.springframework.context.annotation.ImportResource;
 public class OrderApplication {
 
 	/**
-	 * @param args
+	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(OrderApplication.class, args);

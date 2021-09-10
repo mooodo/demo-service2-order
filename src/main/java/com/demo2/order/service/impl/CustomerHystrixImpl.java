@@ -17,9 +17,9 @@ import com.demo2.order.service.CustomerService;
  */
 @Component
 public class CustomerHystrixImpl implements CustomerService {
-	private static Customer DEFAULT_CUSTOMER 
+	private final static Customer DEFAULT_CUSTOMER
 		= new Customer(null, "未知用户", "", null, "", "");
-	private static Address DEFAULT_ADDRESS 
+	private final static Address DEFAULT_ADDRESS
 		= new Address();
 
 	@Override

@@ -16,8 +16,8 @@ import com.demo2.order.service.ProductService;
  */
 @Component
 public class ProductHystrixImpl implements ProductService {
-	private static String DEFAULT_IMAGE = "/static/img/default.jpg";
-	private static Product DEFAULT_PRODUCT 
+	private final static String DEFAULT_IMAGE = "/static/img/default.jpg";
+	private final static Product DEFAULT_PRODUCT
 		= new Product(null, "未知产品", null, null, null, null, DEFAULT_IMAGE, null, null);
 
 	@Override

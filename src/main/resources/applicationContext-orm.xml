@@ -9,6 +9,6 @@
 	>
 	<description>The application context for orm</description>
 	<bean id="order" class="com.demo2.order.service.impl.OrderServiceImpl">
-		<property name="dao" ref="repository"></property>
+		<property name="dao" ref="repository"/>
 	</bean>
 </beans>

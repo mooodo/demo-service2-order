@@ -12,24 +12,24 @@ import com.demo2.order.entity.Order;
  */
 public interface OrderService {
 	/**
-	 * @param order
+	 * @param order the order entity
 	 */
 	public void createOrder(Order order);
 	/**
-	 * @param order
+	 * @param order the order entity
 	 */
 	public void modifyOrder(Order order);
 	/**
-	 * @param order
+	 * @param order the order entity
 	 */
 	public void deleteOrder(Order order);
 	/**
-	 * @param id
-	 * @return
+	 * @param id the id of the order
+	 * @return check the order exists or not
 	 */
 	public Order checkOrder(Long id);
 	/**
-	 * @return
+	 * @return list all of orders
 	 */
 	public List<Order> listOfOrders();
 }

@@ -20,20 +20,20 @@ import com.demo2.order.service.impl.CustomerHystrixImpl;
 @FeignClient(value="service-customer", fallback=CustomerHystrixImpl.class)
 public interface CustomerService {
 	/**
-	 * @param id
-	 * @return the customer of the id.
+	 * @param id the id of customer
+	 * @return the customer by id.
 	 */
 	@GetMapping("orm/customer/load")
 	public Customer load(@RequestParam("id")long id);
 	/**
-	 * @param ids
-	 * @return
+	 * @param ids the list of ids of customers
+	 * @return the list of customers by ids
 	 */
 	@GetMapping("orm/customer/loadMore")
 	public List<Customer> loadMore(@RequestParam("ids") String ids);
 	/**
-	 * @param id
-	 * @return the address of the id
+	 * @param id the id of address
+	 * @return the address by id
 	 */
 	@GetMapping("orm/customer/loadAddress")
 	public Address loadAddress(@RequestParam("id")long id);
